@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="cal.css"/>
+	<script src="cal.js" rel="javascript"></script>
+	<style>
+body {
+font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+height: 300px;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+#main {
+transition: margin-left .5s;
+padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+</style>
+<script>
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";
+document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="calculator.html">Standard</a>
+<a href="scientific.html" target="iframe_1">scientific</a>
+<a href="#">Currency</a>
+<a href="#">converter</a>
+</div>
+
+<div id="main">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Standard</span>
+</div>
+<div class="container">
+<div class="card2">
+	<form name="form2">
+	<div class="card1">
+
+	<div class="card-1">
+		<input type="text" placeholder="0" class="input2" name="input2"/>
+	</div>
+	</div>
+	<table>
+		<tr>
+		<td><input type="button" value="%" id="btn1" class="btn-primary"onclick="displays('%')" /></td>
+		<td><input type="button" value="CE" id="btn2" class="btn-primary"onclick="form2.input2.value=''" /></td>
+		<td><input type="button" value="C" id="btn3" class="btn-primary" onclick="form2.input2.value=''" /></td>
+		<td><input type="button" value="<" id="btn4" class="btn-primary" onclick ="back()" /></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="x&#179;" id="btn5" class="btn-primary"onclick="cube()" /></td>
+		<td><input type="button" value="x&#178;" id="btn5" class="btn-primary" onclick="sqr()" /></td>
+		<td><input type="button" value="&Sqrt;x" id="btn6" class="btn-primary" onclick="squarert()" /></td>
+		<td><input type="button" value=" &#247;" id="btn7" class="btn-primary" onclick="displays('/')"/></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="7" id="btn8" class="btn-primary" onclick="displays('7')" /></td>
+		<td><input type="button" value="8" id="btn9" class="btn-primary" onclick="displays('8')"/></td>
+		<td><input type="button" value="9" id="btn10" class="btn-primary" onclick="displays('9')" /></td>
+		<td><input type="button" value="*" id="btn11" class="btn-primary"onclick="displays('*')" /></td>
+		</tr>
+		
+		<tr>		
+		<td><input type="button" value="4" id="btn12" class="btn-primary" onclick="displays('4')"/></td>
+		<td><input type="button" value="5" id="btn13" class="btn-primary" onclick="displays('5')"/></td>
+		<td><input type="button" value="6" id="btn14" class="btn-primary" onclick="displays('6')"/></td>
+		<td><input type="button" value="-" id="btn15" class="btn-primary" onclick="displays('-')"/></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="3" id="btn16" class="btn-primary"onclick="displays('3')" /></td>
+		<td><input type="button" value="2" id="btn17" class="btn-primary"onclick="displays('2')" /></td>
+		<td><input type="button" value="1" id="btn18" class="btn-primary"onclick="displays('1')"/></td>
+		<td><input type="button" value="+" id="btn19" class="btn-primary"   onclick="displays('+')"/></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="+/-" id="btn20" class="btn-primary" /></td>
+		<td><input type="button" value="0" id="btn21" class="btn-primary" onclick="displays('0')"/></td>
+		<td><input type="button" value="." id="btn22" class="btn-primary" onclick="displays('.')"/></td>
+		<td><input type="button" value="=" id="btn23" class="btn-primary"  onclick="eql()" /></td>
+		</tr>
+	</table>
+</form>
+</div>
+</div>
+</body>
+</html>
